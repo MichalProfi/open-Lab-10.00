@@ -11,11 +11,17 @@ namespace open_Lab_10._00
         static void Main(string[] args)
         {
             Book LOTR = new Book();
-            LOTR.Pages(666);
-            LOTR.Author("MichalProfi");
-            LOTR.Category("Životopis");
-            LOTR.RealeaseDate("31.12.2022");
-            LOTR.Title("Môj život");
+
+            LOTR.author = "MichalProfi";
+
+            LOTR.category = "Adventure";
+
+            LOTR.pages += 666;
+
+            LOTR.releaseDate += 1400;
+        
+            LOTR.title = "HUHUHUH";
+
             Console.WriteLine(LOTR.ToString());
             Console.ReadLine();
         }

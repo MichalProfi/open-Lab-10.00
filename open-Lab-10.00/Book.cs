@@ -8,39 +8,54 @@ namespace open_Lab_10._00
 {
     class Book
     {
-        private string title;
-        private int pages;
-        private string category;
-        private string author;
-        private string releaseDate;
+        private int Pages;
 
-        public void Title(string title)
+        private int ReleaseDate;
+
+
+        public string author { get; set; }
+
+        public string category { get; set; }
+        public int pages
         {
-            this.title = title;
-        }
-        public void Pages(int pages)
-        {
-            this.pages = pages;
-        }
-        public void Category(string category)
-        {
-            this.category = category;
-        }
-        public void Author(string author)
-        {
-            this.author = author;
-        }
-        public void RealeaseDate(string releaseDate)
-        {
-            this.releaseDate = releaseDate;
+          
+            get => this.Pages;
+            set
+            {
+                if (value < 1)
+                {
+                    Pages = 1;
+                }
+                else
+                {
+                    Pages = value;
+                }
+            }
         }
         public override string ToString()
         {
-            return $"Title:{this.title}, \nPages:{this.pages}, \nCategory:{this.category}, \nAuthor:{this.author}, \nRealeaseDate:{this.releaseDate}";
+            return $"Title:{this.title}, Pages:{this.pages}, Category:{this.category}, Author:{this.author}, RealeaseDate:{this.releaseDate}";
 
         }
 
+        public int releaseDate
+        {
+            get => this.ReleaseDate;
+            set
+            {
+                if (value < 1450 || value > 2020)
+                {
+                    ReleaseDate = -1;
+                }
+                else
+                {
+                    ReleaseDate = value;
+                }
+            }
+        }
 
+        public string title
+        { get; set; }
     }
 
 
