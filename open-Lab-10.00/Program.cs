@@ -22,8 +22,19 @@ namespace open_Lab_10._00
         
             LOTR.title = "HUHUHUH";
 
+
+            Book LOTR2 = new Book();
+            Book LOTR3 = new Book("HRHRH", 112);
+            Book HOBIT = new Book("HOHOHO", 911, "Comedy", "santaClaus", 2025);
+
             Console.WriteLine(LOTR.ToString());
-            Console.ReadLine();
+            Console.WriteLine("");
+            Console.WriteLine("LOTR2: " + LOTR2.ToString());
+            Console.WriteLine("");
+            Console.WriteLine("LOTR3: " + LOTR3.ToString());
+            Console.WriteLine("");
+            Console.WriteLine("HOBIT: " + HOBIT.ToString());
+            Console.ReadKey();
         }
     }
 }
