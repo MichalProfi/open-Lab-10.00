@@ -8,53 +8,59 @@ namespace open_Lab_10._00
 {
     class Book
     {
-        private int Pages;
+        
+        public static List<string> categoryList = new List<string>() { "detské", "romantické", "náučné", "sci-fi", "dobrodružné" };
 
-        private int ReleaseDate;
+        private int pages;
+        private string category;
+        private int releaseDate;
+        private string author;
+        private string title;
 
+        public string Author { 
+            get{ return this.author; } 
+            set { this.author = value; } 
+        }
 
-        public string author { get; set; }
-
-        public string category { get; set; }
-        public int pages
+        public string Category
+        {
+            set => category = value;
+        }
+        public int Pages
         {
           
             get => this.Pages;
             set
             {
-                if (value < 1)
+                if (value <= 1)
                 {
-                    Pages = 1;
+                    this.pages = 1;
                 }
                 else
                 {
-                    Pages = value;
+                    this.pages = value;
                 }
             }
         }
-        public override string ToString()
-        {
-            return $"Title:{this.title}, Pages:{this.pages}, Category:{this.category}, Author:{this.author}, RealeaseDate:{this.releaseDate}";
+        
 
-        }
-
-        public int releaseDate
+        public int ReleaseDate
         {
-            get => this.ReleaseDate;
+            get => this.releaseDate;
             set
             {
                 if (value < 1450 || value > 2020)
                 {
-                    ReleaseDate = -1;
+                    releaseDate = -1;
                 }
                 else
                 {
-                    ReleaseDate = value;
+                    releaseDate = value;
                 }
             }
         }
-        public string title
-        { get; set; }
+        public string Title
+        { get { return this.title; } set { this.title = value; } }
     
 
         public Book()
@@ -83,6 +89,12 @@ namespace open_Lab_10._00
             this.releaseDate = releaseDate;
 
         }
+        public override string ToString()
+        {
+            return $"Title:{this.title}, Pages:{this.pages}, Category:{this.category}, Author:{this.author}, RealeaseDate:{this.releaseDate}";
+
+        }
+
     }
 }
 

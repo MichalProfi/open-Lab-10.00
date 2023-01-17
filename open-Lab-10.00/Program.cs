@@ -10,24 +10,26 @@ namespace open_Lab_10._00
     {
         static void Main(string[] args)
         {
-            Book LOTR = new Book();
+            /*Book LOTR = new Book();
 
-            LOTR.author = "MichalProfi";
+            LOTR.Author = "MichalProfi";
 
-            LOTR.category = "Adventure";
+            LOTR.Category = "Adventure";
 
-            LOTR.pages += 666;
+            LOTR.Pages += 666;
 
-            LOTR.releaseDate += 1400;
+            LOTR.ReleaseDate += 1400;
         
-            LOTR.title = "HUHUHUH";
+            LOTR.Title = "HUHUHUH";*/
 
 
             Book LOTR2 = new Book();
             Book LOTR3 = new Book("HRHRH", 112);
             Book HOBIT = new Book("HOHOHO", 911, "Comedy", "santaClaus", 2025);
 
-            Console.WriteLine(LOTR.ToString());
+            HOBIT.Category = Book.categoryList[4];
+            
+           
             Console.WriteLine("");
             Console.WriteLine("LOTR2: " + LOTR2.ToString());
             Console.WriteLine("");
